@@ -1,3 +1,15 @@
 spring:
   application:
     name: event-driven-poc
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+      sns:
+        region: ${AWS_SNS_REGION}
+
+
+aws:
+  config:
+    sns-topic: ${SNS_TOPIC_NAME}
